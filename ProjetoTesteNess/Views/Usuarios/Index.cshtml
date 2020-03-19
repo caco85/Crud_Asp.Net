@@ -4,10 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Controle de Usuarios</h2>
+<!--<a href="~/Views/Usuarios/Index.cshtml">~/Views/Usuarios/Index.cshtml</a> -->
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastre-se", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,7 +24,7 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.nome)
@@ -40,6 +41,6 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.userID })
         </td>
     </tr>
-}
+      }
 
 </table>
